@@ -1,0 +1,38 @@
+<div id="titulot" class="container " >
+    <h1 class="row justify-content-lg-center">UNIVERSIDAD TENICA DE MANABI</h1> 
+    <h2 class="row justify-content-lg-center">DESARROLLO DE SISTEMAS INFORMATICOS</h2>
+    <h2 class="row justify-content-lg-center">LISTA DE ESTUDIANTES</h2>  
+</div>
+
+<div class="container">
+
+    <button id="botonI" class="btn btn-info" type="button" [routerLink]="['/estudiantes/form']"><b>NUEVO ESTUDIANTE</b></button>
+
+    <table class="table">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRES</th>
+            <th scope="col">APELLIDOS</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">NOTA</th>
+            <th scope="col">EDITAR</th>
+            <th scope="col">ELIMINAR</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let estudiante of estudiantes">
+            <th scope="row"> <b>{{estudiante.id}}</b> </th>
+            <td><b>{{estudiante.nombres}}</b></td>
+            <td><b>{{estudiante.apellidos}}</b></td>
+            <td><b>{{estudiante.email}}</b></td>
+            <td><b>{{estudiante.nota}}</b></td>
+            <td><button id="botonUp" type="button" name="button" class="btn btn-primary" [routerLink]="['/estudiantes/form', estudiante.id]" > <b>EDITAR</b> </button></td>
+            <td><button id="botonDe" type="button"  class="btn btn-danger" (click)="delete(estudiante)"> <b>BORRAR</b> </button></td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>

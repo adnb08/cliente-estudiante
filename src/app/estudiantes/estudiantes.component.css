@@ -1,0 +1,33 @@
+
+
+#botonI{
+    margin: 8px;
+    background-color: rgb(73, 130, 221);  
+     
+}
+
+
+#botonUp{
+    
+    background-color: rgb(52, 197, 223); 
+    color: black; 
+     
+}
+
+
+#botonDe{
+    
+    background-color: rgb(235, 71, 71);
+    color: black;   
+     
+}
+
+h1{
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
+    padding: auto;
+}
+
